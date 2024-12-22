@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra: Radianlar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+ <div id="resultModal" class="modal hidden">
+        <div id="resultModalContent" class="modal-content">
+        </div>
+         <button id="closeResultModal" class="close-button">X</button>
+    </div>
+    <div id="questionModal" class="modal hidden">
+        <div id="modalContent" class="modal-content">
+        </div>
+         <button id="closeModal" class="close-button">X</button>
+    </div>
+    <header class="main-header">
+        <h1 class="main-title">Algebra: Radianlar</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><button class="nav-button" data-mode="game">O'yinni boshlash</button></li>
+                <li><button class="nav-button" data-mode="training">Mashg'ulot rejimi</button></li>
+            </ul>
+        </nav>
+        <div id="scoreContainer" class="score-container">
+            Ball: <span id="scoreDisplay">0</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="authorsSection" class="main-section">
+            <div class="authors-container">
+                <h2>Saytni yaratganlar</h2>
+                <p class="author-name">Loyiha Muallifi: Akmalov Bositxon</p>
+                <p class="author-name">Koder: Nosirov Abdurahmon</p>
+                <p class="author-name">2-chi Koder: Sohibov Samandar</p>
+                <p class="author-name">Dizayner: Bo'riboyeva Davlatbibi</p>
+                <p class="author-name">Yordamchi: Nabiyev Farzulloh</p>
+            </div>
+        </section>
+
+        <section id="gameSection" class="main-section hidden">
+            <h2>Savolni tanlang</h2>
+            <br>
+            <div class="questions-table"></div>  <!-- Важно! -->
+        </section>
+
+        <section id="trainingSection" class="main-section hidden">
+            <h2>Mashg'ulot rejimi</h2>
+            <p>Bu rejimda savollarga javob berish orqali ball to'planmaydi.</p>
+            <br>
+            <div class="questions-table"></div> <!-- Важно! -->
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>Algebra: Radianlar mavzusida o'quv sayt.</p>
+    </footer>
+    <script src="js/app.js" type="module"></script>
+</body>
+
+</html>
