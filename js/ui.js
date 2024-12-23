@@ -70,6 +70,7 @@ function selectQuestion(question, mode) {
         ? question.options.map(option => `<button class="option-button" data-answer="${option}">${option}</button>`).join('')
         : ''}
         ${mode === 'training' ? '<button class="next-button">Keyingi savol</button>' : ''}
+        <button class="exit-button">Chiqish</button>
     `;
     modal.style.display = 'flex';
 
@@ -80,9 +81,10 @@ function selectQuestion(question, mode) {
         });
     }
     if(mode === 'training'){
-         modalContent.innerHTML += `<p class="explanation">${question.explanation}</p>`;
+        modalContent.innerHTML += `<p class="explanation">${question.explanation}</p>`;
         modalContent.querySelector('.next-button').addEventListener('click', () => handleNextQuestion(question, mode));
     }
+      modalContent.querySelector('.exit-button').addEventListener('click', closeModal);
 
      document.getElementById('closeModal').addEventListener('click', closeModal);
 }
@@ -142,7 +144,10 @@ function checkAnswer(question, selectedAnswer, mode, modalContent)
 function showNextQuestion(currentQuestion, mode) {
   const gameQuestions = questionsData['game'];
     appState.currentQuestionIndex++;
+     console.log("Current Question Index:", appState.currentQuestionIndex);
+     console.log("Total Questions:", gameQuestions.length)
     if (appState.currentQuestionIndex >= gameQuestions.length ) {
+         console.log('showResultModal called from showNextQuestion');
           showResultModal()
     }else{
          const nextQuestion = gameQuestions[appState.currentQuestionIndex];
@@ -156,6 +161,7 @@ function displayScore(score)
      document.getElementById('scoreDisplay').textContent = score;
 }
 function showResultModal() {
+    console.log('showResultModal function called!');
     const modal = document.getElementById('resultModal');
     const modalContent = document.getElementById('resultModalContent');
     modalContent.innerHTML = `
