@@ -103,7 +103,6 @@ select{
 
 .author-name {
     margin-bottom: 10px;
-     font-family: "Pacifico";
 }
 .question-card {
     background-color: #ecf0f1;
@@ -182,6 +181,8 @@ select{
          padding: 10px;
     border-radius: 5px;
      background-color: #f0f0f0;
+       white-space: pre-wrap;
+      line-height: 1.5;
   }
  .close-button {
         position: absolute;
@@ -220,4 +221,18 @@ select{
            transition: transform 0.2s ease;
     }
       .next-button:hover{
-        transform: scale(1.05);}
+        transform: scale(1.05);
+      }
+      .exit-button{
+        margin: 10px;
+         padding: 10px 15px;
+        border-radius: 5px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+       .exit-button:hover{
+        transform: scale(1.05);
+      }
